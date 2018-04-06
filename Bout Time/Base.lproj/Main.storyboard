@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,151 +19,188 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZV-g8-KYA" userLabel="first">
-                                <rect key="frame" x="5" y="20" width="310" height="120"/>
+                            <stackView opaque="NO" contentMode="bottom" axis="vertical" distribution="equalSpacing" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="a0F-Xh-0T6">
+                                <rect key="frame" x="25" y="40" width="270" height="344"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-uS-Shd">
-                                        <rect key="frame" x="250" y="20" width="40" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="down_full"/>
-                                        <state key="selected" image="down_full_selected"/>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp7-5c-9ly">
-                                        <rect key="frame" x="20" y="20" width="230" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ev-Mk-JZM">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="80"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp7-5c-9ly">
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="80"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-uS-Shd">
+                                                <rect key="frame" x="230" y="0.0" width="40" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Xe5-jB-y1g"/>
+                                                    <constraint firstAttribute="height" constant="80" id="pGs-9A-8pf"/>
+                                                </constraints>
+                                                <state key="normal" image="down_full"/>
+                                                <state key="selected" image="down_full_selected"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41c-gv-nsf">
+                                        <rect key="frame" x="0.0" y="88" width="270" height="80"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3U-ji-6lB">
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="80"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OSb-Oc-7Cx">
+                                                <rect key="frame" x="230" y="0.0" width="40" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-96-i9c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="B1x-JD-mxs"/>
+                                                            <constraint firstAttribute="height" constant="40" id="q7B-wh-KaX"/>
+                                                        </constraints>
+                                                        <state key="normal" image="up_half"/>
+                                                        <state key="selected" image="up_half_selected"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-mr-4Bv">
+                                                        <rect key="frame" x="0.0" y="40" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="c26-Up-uJS"/>
+                                                            <constraint firstAttribute="width" constant="40" id="xVU-Wq-jr1"/>
+                                                        </constraints>
+                                                        <state key="normal" image="down_half"/>
+                                                        <state key="selected" image="down_half_selected"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxw-38-Bve">
+                                        <rect key="frame" x="0.0" y="176" width="270" height="80"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7b-u0-tI3">
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="80"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-Qv-t7a">
+                                                <rect key="frame" x="230" y="0.0" width="40" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNW-Wo-bo8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="43M-2K-rhu"/>
+                                                            <constraint firstAttribute="width" constant="40" id="kXl-ap-igO"/>
+                                                        </constraints>
+                                                        <state key="normal" image="up_half"/>
+                                                        <state key="selected" image="up_half_selected"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebx-Xv-JSV">
+                                                        <rect key="frame" x="0.0" y="40" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="CzQ-Fe-Xee"/>
+                                                            <constraint firstAttribute="height" constant="40" id="XwH-A7-XzN"/>
+                                                        </constraints>
+                                                        <state key="normal" image="down_half"/>
+                                                        <state key="selected" image="down_half_selected"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEp-k0-s5L">
+                                        <rect key="frame" x="0.0" y="264" width="270" height="80"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTs-TN-I6S">
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="80"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgF-OE-ADg">
+                                                <rect key="frame" x="230" y="0.0" width="40" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="E8J-JA-shq"/>
+                                                    <constraint firstAttribute="width" constant="40" id="Zmk-Ml-6Qv"/>
+                                                </constraints>
+                                                <state key="normal" image="up_full"/>
+                                                <state key="selected" image="down_full_selected"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mso-4z-eF2" userLabel="second">
-                                <rect key="frame" x="5" y="115" width="310" height="120"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3U-ji-6lB">
-                                        <rect key="frame" x="20" y="20" width="230" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-96-i9c">
-                                        <rect key="frame" x="250" y="20" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="up_half"/>
-                                        <state key="selected" image="up_half_selected"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-mr-4Bv">
-                                        <rect key="frame" x="250" y="60" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="down_half"/>
-                                        <state key="selected" image="down_half_selected"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ib-K0-QAn" userLabel="third">
-                                <rect key="frame" x="5" y="206" width="310" height="120"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7b-u0-tI3">
-                                        <rect key="frame" x="20" y="20" width="230" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNW-Wo-bo8">
-                                        <rect key="frame" x="250" y="20" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="up_half"/>
-                                        <state key="selected" image="up_half_selected"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebx-Xv-JSV">
-                                        <rect key="frame" x="250" y="60" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="down_half"/>
-                                        <state key="selected" image="down_half_selected"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMP-s4-Upx" userLabel="fourth">
-                                <rect key="frame" x="5" y="296" width="310" height="120"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgF-OE-ADg">
-                                        <rect key="frame" x="250" y="20" width="40" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="up_full"/>
-                                        <state key="selected" image="down_full_selected"/>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTs-TN-I6S">
-                                        <rect key="frame" x="20" y="20" width="230" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppw-y0-Hhr" userLabel="Info label">
-                                <rect key="frame" x="88" y="526" width="142.5" height="21.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstItem="1Ev-Mk-JZM" firstAttribute="trailing" secondItem="41c-gv-nsf" secondAttribute="trailing" id="1zV-u2-Mdt"/>
+                                    <constraint firstItem="Nxw-38-Bve" firstAttribute="trailing" secondItem="fEp-k0-s5L" secondAttribute="trailing" id="XgZ-hY-hIf"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Ev-Mk-JZM" secondAttribute="trailing" id="dTW-5H-3XP"/>
+                                    <constraint firstItem="41c-gv-nsf" firstAttribute="trailing" secondItem="Nxw-38-Bve" secondAttribute="trailing" id="wwX-VN-OMZ"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppw-y0-Hhr" userLabel="Info label">
+                                <rect key="frame" x="89.5" y="526.5" width="142.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.30588235294117649" green="0.56470588235294117" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="0:55" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTD-Kc-d8Q" userLabel="Time">
-                                <rect key="frame" x="89" y="424" width="142" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6M-g7-1Kg" userLabel="Next round btn">
+                                <rect key="frame" x="60" y="472.5" width="200" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="MOb-4Y-m98"/>
+                                    <constraint firstAttribute="width" constant="200" id="fOx-xr-bd1"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="next_round_success"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0:55" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTD-Kc-d8Q" userLabel="Time">
+                                <rect key="frame" x="90" y="466.5" width="142" height="52"/>
                                 <color key="backgroundColor" red="0.0" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="djY-H7-NDM"/>
+                                </constraints>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6M-g7-1Kg" userLabel="Next round btn">
-                                <rect key="frame" x="60" y="430" width="200" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="next_round_success"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.16078431372549021" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mso-4z-eF2" secondAttribute="trailing" constant="5" id="76r-VB-rk6"/>
-                            <constraint firstItem="bMP-s4-Upx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="JKs-dj-bja"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PZV-g8-KYA" secondAttribute="trailing" constant="5" id="ela-jR-pgL"/>
-                            <constraint firstItem="PZV-g8-KYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="mZt-cA-y4h"/>
-                            <constraint firstItem="mso-4z-eF2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="rtj-3P-2Fz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bMP-s4-Upx" secondAttribute="trailing" constant="5" id="ttA-fx-gMa"/>
-                            <constraint firstItem="8Ib-K0-QAn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="uoI-sm-tiU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ib-K0-QAn" secondAttribute="trailing" constant="5" id="z0y-k8-g0w"/>
+                            <constraint firstItem="dTD-Kc-d8Q" firstAttribute="trailing" secondItem="Ppw-y0-Hhr" secondAttribute="trailing" id="DEO-hG-kRr"/>
+                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Flj-Oo-og8"/>
+                            <constraint firstItem="dTD-Kc-d8Q" firstAttribute="centerX" secondItem="k6M-g7-1Kg" secondAttribute="centerX" constant="1" id="XYP-9S-Cfo"/>
+                            <constraint firstItem="dTD-Kc-d8Q" firstAttribute="bottom" secondItem="k6M-g7-1Kg" secondAttribute="bottom" id="dmE-uw-f7t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ppw-y0-Hhr" secondAttribute="bottom" constant="20" id="eUh-A3-AkI"/>
+                            <constraint firstItem="dTD-Kc-d8Q" firstAttribute="centerX" secondItem="Ppw-y0-Hhr" secondAttribute="centerX" id="gUg-M5-wBP"/>
+                            <constraint firstItem="Ppw-y0-Hhr" firstAttribute="top" secondItem="dTD-Kc-d8Q" secondAttribute="bottom" constant="8" symbolic="YES" id="rp9-B5-cXH"/>
+                            <constraint firstItem="Ppw-y0-Hhr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tqa-YS-jyo"/>
+                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="u5j-fq-SXc"/>
+                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ySB-dY-oQ6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
