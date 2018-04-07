@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>AppleColor RGB Monitor released</key>
+    <dict>
+        <key>time</key>
+        <integer>1986</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Apple_displays</string>
+    </dict>
+	<key>Macintosh XL released</key>
+	<dict>
+		<key>time</key>
+		<integer>1985</integer>
+		<key>site</key>
+		<string>https://en.wikipedia.org/wiki/Macintosh_XL</string>
+	</dict>
+	<key>Macintosh (128K) released</key>
+	<dict>
+		<key>time</key>
+		<integer>1984</integer>
+		<key>site</key>
+		<string>https://en.wikipedia.org/wiki/Macintosh_128K</string>
+	</dict>
+	<key>Apple III Plus released</key>
+	<dict>
+		<key>time</key>
+		<integer>1983</integer>
+		<key>site</key>
+		<string>https://en.wikipedia.org/wiki/Apple_III_Plus</string>
+	</dict>
+	<key>Apple III released</key>
+	<dict>
+		<key>time</key>
+		<integer>1980</integer>
+		<key>site</key>
+		<string>https://en.wikipedia.org/wiki/Apple_III</string>
+	</dict>
+	<key>Apple II released</key>
+	<dict>
+		<key>site</key>
+		<string>https://en.wikipedia.org/wiki/Apple_II</string>
+		<key>time</key>
+		<integer>1977</integer>
+	</dict>
+	<key> Apple I was released</key>
+	<dict>
+		<key>time</key>
+		<integer>1976</integer>
+		<key>site</key>
+		<string>https://en.wikipedia.org/wiki/Apple_I</string>
+	</dict>
+    <key> Macintosh II released</key>
+    <dict>
+        <key>time</key>
+        <integer>1987</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Macintosh_II</string>
+    </dict>
+    <key> Macintosh IIx released</key>
+    <dict>
+        <key>time</key>
+        <integer>1988</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Macintosh_IIx</string>
+    </dict>
+    <key> Apple Two Page Monochrome Monitor released</key>
+    <dict>
+        <key>time</key>
+        <integer>1989</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Apple_displays</string>
+    </dict>
+    <key> Macintosh Classic released</key>
+    <dict>
+        <key>time</key>
+        <integer>1990</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Macintosh_Classic</string>
+    </dict>
+    <key> Macintosh Classic II released</key>
+    <dict>
+        <key>time</key>
+        <integer>1991</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Macintosh_Classic_II</string>
+    </dict>
+    <key>Macintosh IIvi released</key>
+    <dict>
+        <key>time</key>
+        <integer>1992</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Macintosh_IIvi</string>
+    </dict>
+    <key>Macintosh LC 550 released</key>
+    <dict>
+        <key>time</key>
+        <integer>1994</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Macintosh_LC_550</string>
+    </dict>
+    <key>Power Macintosh 5300 LC released</key>
+    <dict>
+        <key>time</key>
+        <integer>1997</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Power_Macintosh_5300_LC</string>
+    </dict>
+    <key>Power Macintosh 4400 released</key>
+    <dict>
+        <key>time</key>
+        <integer>1995</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Power_Macintosh_4400</string>
+    </dict>
+    <key>Apple ColorSync/AppleVision 750 Display released</key>
+    <dict>
+        <key>time</key>
+        <integer>1997</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Apple_ColorSync/AppleVision_750_Display</string>
+    </dict>
+    <key>Apple iMac G3 released</key>
+    <dict>
+        <key>time</key>
+        <integer>1998</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IMac_G3</string>
+    </dict>
+    <key>iBook (FireWire) released</key>
+    <dict>
+        <key>time</key>
+        <integer>2000</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IBook</string>
+    </dict>
+    <key>iPod (1st gen) released</key>
+    <dict>
+        <key>time</key>
+        <integer>2001</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPod_classic#First_generation</string>
+    </dict>
+    <key>iMac G4 15"</key>
+    <dict>
+        <key>time</key>
+        <integer>2002</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IMac</string>
+    </dict>
+    <key>iMac G4 20" released</key>
+    <dict>
+        <key>time</key>
+        <integer>2003</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IMac_G4</string>
+    </dict>
+    <key>iPod (4th gen) released</key>
+    <dict>
+        <key>time</key>
+        <integer>2004</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPod_classic#Fourth_generation</string>
+    </dict>
+    <key>iPod Mini released </key>
+    <dict>
+        <key>time</key>
+        <integer>2005</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPod_Mini</string>
+    </dict>
+    <key>MacBook (17") released</key>
+    <dict>
+        <key>time</key>
+        <integer>2006</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/MacBook_Pro</string>
+    </dict>
+    <key>Mac Mini released</key>
+    <dict>
+        <key>time</key>
+        <integer>2007</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Apple_Mighty_Mouse</string>
+    </dict>
+    <key>iPhone (1st generation) released</key>
+    <dict>
+        <key>time</key>
+        <integer>2008</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPhone_(1st_generation)</string>
+    </dict>
+    <key>iPhone 3GS (16 and 32GB) released</key>
+    <dict>
+        <key>time</key>
+        <integer>2009</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPhone_3GS</string>
+    </dict>
+    <key>iPhone 4 (GSM) released</key>
+    <dict>
+        <key>time</key>
+        <integer>2010</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPhone_4</string>
+    </dict>
+    <key>iPhone 4S released</key>
+    <dict>
+        <key>time</key>
+        <integer>2011</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPhone_4S</string>
+    </dict>
+    <key>iPhone 5 released</key>
+    <dict>
+        <key>time</key>
+        <integer>2012</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPhone_5</string>
+    </dict>
+    <key>iPad Air released</key>
+    <dict>
+        <key>time</key>
+        <integer>2013</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPad_Air</string>
+    </dict>
+    <key>iPhone 6 released</key>
+    <dict>
+        <key>time</key>
+        <integer>2014</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPhone_6</string>
+    </dict>
+    <key>Apple Watch released</key>
+    <dict>
+        <key>time</key>
+        <integer>2015</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/Apple_Watch</string>
+    </dict>
+    <key>iPhone 7 released</key>
+    <dict>
+        <key>time</key>
+        <integer>2016</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPhone_7</string>
+    </dict>
+    <key>iPhone X released</key>
+    <dict>
+        <key>time</key>
+        <integer>2018</integer>
+        <key>site</key>
+        <string>https://en.wikipedia.org/wiki/IPhone_X</string>
+    </dict>
+</dict>
+</plist>
