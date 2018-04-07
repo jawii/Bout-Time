@@ -38,11 +38,28 @@ class ViewController: UIViewController {
         gameObject = QuizManager(events: events, firstText: firstText, secondText: secondText, thirdText: thirdText, fourthText: fourthText)
         
         gameObject.startGame()
+        
+        //shake
+        self.becomeFirstResponder() //get the shake gesture
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+   
+    // We are willing to become first responder to get shake motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            gameObject.checkOrder()
+        }
     }
     
     
@@ -55,15 +72,15 @@ class ViewController: UIViewController {
         //change event places depending which button was pressed
         switch button.tag {
         case 1, 2:
-            event = gameObject.event2!
+            event = gameObject.event2
             gameObject.event2 = gameObject.event1
             gameObject.event1 = event
         case 3, 4:
-            event = gameObject.event3!
+            event = gameObject.event3
             gameObject.event3 = gameObject.event2
             gameObject.event2 = event
         case 5,6:
-            event = gameObject.event4!
+            event = gameObject.event4
             gameObject.event4 = gameObject.event3
             gameObject.event3 = event
         default:
