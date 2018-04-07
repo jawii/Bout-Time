@@ -37,13 +37,16 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-uS-Shd">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" semanticContentAttribute="spatial" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-uS-Shd">
                                                 <rect key="frame" x="250" y="0.0" width="40" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="Xe5-jB-y1g"/>
                                                 </constraints>
                                                 <state key="normal" image="down_full"/>
                                                 <state key="selected" image="down_full_selected"/>
+                                                <connections>
+                                                    <action selector="orderChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DxY-Vr-Crl"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -65,21 +68,27 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OSb-Oc-7Cx">
                                                 <rect key="frame" x="250" y="0.0" width="40" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-96-i9c">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-96-i9c">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="q7B-wh-KaX"/>
                                                         </constraints>
                                                         <state key="normal" image="up_half"/>
                                                         <state key="selected" image="up_half_selected"/>
+                                                        <connections>
+                                                            <action selector="orderChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAT-Qx-JHP"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-mr-4Bv">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-mr-4Bv">
                                                         <rect key="frame" x="0.0" y="40" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="xVU-Wq-jr1"/>
                                                         </constraints>
                                                         <state key="normal" image="down_half"/>
                                                         <state key="selected" image="down_half_selected"/>
+                                                        <connections>
+                                                            <action selector="orderChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xu-vv-1bn"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -103,21 +112,27 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-Qv-t7a">
                                                 <rect key="frame" x="250" y="0.0" width="40" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNW-Wo-bo8">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNW-Wo-bo8">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="kXl-ap-igO"/>
                                                         </constraints>
                                                         <state key="normal" image="up_half"/>
                                                         <state key="selected" image="up_half_selected"/>
+                                                        <connections>
+                                                            <action selector="orderChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RRg-6O-EOk"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebx-Xv-JSV">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebx-Xv-JSV">
                                                         <rect key="frame" x="0.0" y="40" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="CzQ-Fe-Xee"/>
                                                         </constraints>
                                                         <state key="normal" image="down_half"/>
                                                         <state key="selected" image="down_half_selected"/>
+                                                        <connections>
+                                                            <action selector="orderChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y0w-3e-gyi"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -138,20 +153,23 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgF-OE-ADg">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgF-OE-ADg">
                                                 <rect key="frame" x="250" y="0.0" width="40" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="Zmk-Ml-6Qv"/>
                                                 </constraints>
                                                 <state key="normal" image="up_full"/>
                                                 <state key="selected" image="down_full_selected"/>
+                                                <connections>
+                                                    <action selector="orderChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UqL-5c-jw0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppw-y0-Hhr" userLabel="Info label">
-                                <rect key="frame" x="85" y="529" width="151" height="23"/>
+                                <rect key="frame" x="85.5" y="529" width="150.5" height="22.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.30588235294117649" green="0.56470588235294117" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -166,7 +184,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="next_round_success"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0:45" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-Hp-yOf" userLabel="Timer">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0:45" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-Hp-yOf" userLabel="Timer">
                                 <rect key="frame" x="104" y="440" width="112" height="81"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

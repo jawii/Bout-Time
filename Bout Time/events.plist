@@ -44,42 +44,42 @@
 		<key>time</key>
 		<integer>1977</integer>
 	</dict>
-	<key> Apple I was released</key>
+	<key>Apple I was released</key>
 	<dict>
 		<key>time</key>
 		<integer>1976</integer>
 		<key>site</key>
 		<string>https://en.wikipedia.org/wiki/Apple_I</string>
 	</dict>
-    <key> Macintosh II released</key>
+    <key>Macintosh II released</key>
     <dict>
         <key>time</key>
         <integer>1987</integer>
         <key>site</key>
         <string>https://en.wikipedia.org/wiki/Macintosh_II</string>
     </dict>
-    <key> Macintosh IIx released</key>
+    <key>Macintosh IIx released</key>
     <dict>
         <key>time</key>
         <integer>1988</integer>
         <key>site</key>
         <string>https://en.wikipedia.org/wiki/Macintosh_IIx</string>
     </dict>
-    <key> Apple Two Page Monochrome Monitor released</key>
+    <key>Apple Two Page Monochrome Monitor released</key>
     <dict>
         <key>time</key>
         <integer>1989</integer>
         <key>site</key>
         <string>https://en.wikipedia.org/wiki/Apple_displays</string>
     </dict>
-    <key> Macintosh Classic released</key>
+    <key>Macintosh Classic released</key>
     <dict>
         <key>time</key>
         <integer>1990</integer>
         <key>site</key>
         <string>https://en.wikipedia.org/wiki/Macintosh_Classic</string>
     </dict>
-    <key> Macintosh Classic II released</key>
+    <key>Macintosh Classic II released</key>
     <dict>
         <key>time</key>
         <integer>1991</integer>
