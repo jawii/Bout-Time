@@ -22,7 +22,7 @@
                             <stackView opaque="NO" contentMode="bottom" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="a0F-Xh-0T6" userLabel="Events">
                                 <rect key="frame" x="15" y="40" width="290" height="344"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ev-Mk-JZM">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="1Ev-Mk-JZM">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="80"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp7-5c-9ly">
@@ -37,7 +37,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-uS-Shd">
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-uS-Shd">
                                                 <rect key="frame" x="250" y="0.0" width="40" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="Xe5-jB-y1g"/>
@@ -65,7 +65,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OSb-Oc-7Cx">
                                                 <rect key="frame" x="250" y="0.0" width="40" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-96-i9c">
+                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-96-i9c">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="q7B-wh-KaX"/>
@@ -73,7 +73,7 @@
                                                         <state key="normal" image="up_half"/>
                                                         <state key="selected" image="up_half_selected"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-mr-4Bv">
+                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-mr-4Bv">
                                                         <rect key="frame" x="0.0" y="40" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="xVU-Wq-jr1"/>
@@ -100,10 +100,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-Qv-t7a">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-Qv-t7a">
                                                 <rect key="frame" x="250" y="0.0" width="40" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNW-Wo-bo8">
+                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNW-Wo-bo8">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="kXl-ap-igO"/>
@@ -111,7 +111,7 @@
                                                         <state key="normal" image="up_half"/>
                                                         <state key="selected" image="up_half_selected"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebx-Xv-JSV">
+                                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebx-Xv-JSV">
                                                         <rect key="frame" x="0.0" y="40" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="CzQ-Fe-Xee"/>
@@ -151,42 +151,42 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppw-y0-Hhr" userLabel="Info label">
-                                <rect key="frame" x="84.5" y="529" width="150.5" height="22.5"/>
+                                <rect key="frame" x="85" y="529" width="151" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.30588235294117649" green="0.56470588235294117" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0:45" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-Hp-yOf" userLabel="Timer">
-                                <rect key="frame" x="104" y="407" width="112" height="81"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button hidden="YES" autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6M-g7-1Kg" userLabel="Next round btn">
-                                <rect key="frame" x="60" y="472" width="200" height="46"/>
+                                <rect key="frame" x="60" y="448" width="200" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="MOb-4Y-m98"/>
                                     <constraint firstAttribute="width" constant="200" id="fOx-xr-bd1"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="next_round_success"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0:45" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-Hp-yOf" userLabel="Timer">
+                                <rect key="frame" x="104" y="440" width="112" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.16078431372549021" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0fV-Hp-yOf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Kw-JX-GuV"/>
-                            <constraint firstItem="0fV-Hp-yOf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="8p9-Bq-pw9"/>
-                            <constraint firstItem="Ppw-y0-Hhr" firstAttribute="top" secondItem="0fV-Hp-yOf" secondAttribute="bottom" constant="41" id="EEd-Jg-C2l"/>
-                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="JhX-iu-sj1"/>
-                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Jil-SC-lP9"/>
-                            <constraint firstItem="0fV-Hp-yOf" firstAttribute="top" secondItem="a0F-Xh-0T6" secondAttribute="bottom" constant="23" id="LZ4-zx-dGM"/>
-                            <constraint firstItem="k6M-g7-1Kg" firstAttribute="top" secondItem="a0F-Xh-0T6" secondAttribute="bottom" constant="88" id="hkA-kc-ksq"/>
-                            <constraint firstItem="Ppw-y0-Hhr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jV3-qk-0Ya"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0F-Xh-0T6" secondAttribute="trailing" constant="15" id="qZo-S5-YPC"/>
-                            <constraint firstItem="Ppw-y0-Hhr" firstAttribute="top" secondItem="k6M-g7-1Kg" secondAttribute="bottom" constant="11" id="rLF-md-7r1"/>
-                            <constraint firstItem="k6M-g7-1Kg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zP1-zj-6Nd"/>
+                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Ck-tx-U6f"/>
+                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="DBZ-hO-OUv"/>
+                            <constraint firstItem="Ppw-y0-Hhr" firstAttribute="top" secondItem="k6M-g7-1Kg" secondAttribute="bottom" constant="35" id="F2l-JP-pHR"/>
+                            <constraint firstItem="Ppw-y0-Hhr" firstAttribute="top" secondItem="0fV-Hp-yOf" secondAttribute="bottom" constant="8" symbolic="YES" id="HF2-d2-uNw"/>
+                            <constraint firstItem="0fV-Hp-yOf" firstAttribute="centerX" secondItem="k6M-g7-1Kg" secondAttribute="centerX" id="P5T-5o-5Ah"/>
+                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ThT-9I-LC8"/>
+                            <constraint firstItem="0fV-Hp-yOf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="XsR-6l-F9d"/>
+                            <constraint firstItem="k6M-g7-1Kg" firstAttribute="centerX" secondItem="Ppw-y0-Hhr" secondAttribute="centerX" id="arI-YB-tu9"/>
+                            <constraint firstItem="a0F-Xh-0T6" firstAttribute="centerX" secondItem="k6M-g7-1Kg" secondAttribute="centerX" id="ba9-q3-kAI"/>
+                            <constraint firstItem="0fV-Hp-yOf" firstAttribute="top" secondItem="a0F-Xh-0T6" secondAttribute="bottom" constant="56" id="fAu-la-K6L"/>
+                            <constraint firstItem="k6M-g7-1Kg" firstAttribute="top" secondItem="a0F-Xh-0T6" secondAttribute="bottom" constant="64" id="hNO-JQ-MX4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
