@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var fourthText: UITextView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var levelControlButton: UIButton!
+    @IBOutlet weak var timerText: UITextView!
     
 
     required init?(coder aDecoder: NSCoder) {
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(gameObject.events[0].site)
-        gameObject = QuizManager(events: events, firstText: firstText, secondText: secondText, thirdText: thirdText, fourthText: fourthText)
+        gameObject = QuizManager(events: events, firstText: firstText, secondText: secondText, thirdText: thirdText, fourthText: fourthText, timerLabel: timerText, roundControlBtn: levelControlButton, infoLabel: infoLabel)
         
         gameObject.startGame()
         
@@ -57,7 +58,8 @@ class ViewController: UIViewController {
     
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if motion == .motionShake {
+        
+        if motion == .motionShake && gameObject.gameOn {
             gameObject.checkOrder()
         }
     }
@@ -87,6 +89,14 @@ class ViewController: UIViewController {
             print("Something is wrong")
         }
         gameObject.updateTexts()
+    }
+    
+    @IBAction func showInfo(_ sender: UITextView) {
+        
+    }
+    
+    @IBAction func startNewRound() {
+        gameObject.startRound()
     }
 
 }

@@ -12,6 +12,8 @@ import GameplayKit
 
 class QuizManager {
     var events: [Event]
+    var roundControlBtn: UIButton
+    
     var firstText: UITextView
     var secondText: UITextView
     var thirdText: UITextView
@@ -22,7 +24,15 @@ class QuizManager {
     var event3: Event
     var event4: Event
     
-    init(events: [Event], firstText: UITextView, secondText: UITextView, thirdText: UITextView, fourthText: UITextView){
+    var timeLabel: UITextView
+    var infoLabel: UILabel
+    
+    var timer: Timer?
+    var roundTime = 60
+    
+    var gameOn = true
+    
+    init(events: [Event], firstText: UITextView, secondText: UITextView, thirdText: UITextView, fourthText: UITextView, timerLabel: UITextView, roundControlBtn: UIButton, infoLabel: UILabel){
         self.events = events
         self.firstText = firstText
         self.secondText = secondText
@@ -33,6 +43,9 @@ class QuizManager {
         self.event2 = events[eventIndex + 1]
         self.event3 = events[eventIndex + 2]
         self.event4 = events[eventIndex + 3]
+        self.timeLabel = timerLabel
+        self.roundControlBtn = roundControlBtn
+        self.infoLabel = infoLabel
     }
     
     ///shuffle events array
@@ -41,6 +54,15 @@ class QuizManager {
     }
     
     func checkOrder() {
+        gameOn = false
+        //stop the timer
+        timer?.invalidate()
+        timeLabel.isHidden = true
+        //reveal the controlLabel
+        roundControlBtn.isHidden = false
+        //change labeltext to infoText about pressing the events
+        infoLabel.text = "Tap Events to Show More"
+        
         //go trough events and check if lower level has higher lower year
         if Int(event1.time) <= Int(event2.time) && Int(event2.time) <= Int(event3.time) && Int(event3.time) <= Int(event4.time) {
             correctAnswer()
@@ -48,18 +70,16 @@ class QuizManager {
         else{
             wrongAnswer()
         }
-        
     }
     
     func wrongAnswer() {
         print("Wrong Answer")
-        startRound()
+        roundControlBtn.setImage(UIImage(named: "next_round_fail.png"), for: .normal)
     }
     
     func correctAnswer() {
         print("Correct Answer")
-        startRound()
-        
+        roundControlBtn.setImage(UIImage(named: "next_round_success.png"), for: .normal)
     }
     
     func startGame() {
@@ -68,6 +88,12 @@ class QuizManager {
     }
     
     func startRound() {
+        gameOn = true
+        //setup the labels and reveal the timer
+        infoLabel.text = "Shake to complete"
+        roundControlBtn.isHidden = true
+        timeLabel.isHidden = false
+        
         //add new texts on game. Raise the index number for the next round
         event1 = events[eventIndex]
         event2 = events[eventIndex + 1]
@@ -82,6 +108,8 @@ class QuizManager {
             eventIndex = 0
         }
         
+        roundTime = 60
+        startTimer()
         updateTexts()
     }
 
@@ -90,5 +118,22 @@ class QuizManager {
         secondText.text = event2.eventName
         thirdText.text = event3.eventName
         fourthText.text = event4.eventName
+    }
+    
+    ///Starts timer with timeInterval
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    ///Updates times
+    ///@objc <- dunno what that means but hey, it works :>
+    @objc func updateTimer(){
+        //print(roundTime)
+        roundTime -= 1
+        
+        if roundTime == 0 {
+            checkOrder()
+        }
+        timeLabel.text = "0:\(roundTime)"
     }
 }

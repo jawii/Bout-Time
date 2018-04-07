@@ -25,9 +25,12 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="1Ev-Mk-JZM">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="80"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp7-5c-9ly">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" editable="NO" text="Sample text Here" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zp7-5c-9ly">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" link="YES" notEnabled="YES"/>
+                                                </accessibility>
                                                 <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -35,6 +38,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="0"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSelectable" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" semanticContentAttribute="spatial" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-uS-Shd">
@@ -183,8 +187,11 @@
                                     <constraint firstAttribute="width" constant="200" id="fOx-xr-bd1"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="next_round_success"/>
+                                <connections>
+                                    <action selector="startNewRound" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoz-xB-b5P"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0:45" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-Hp-yOf" userLabel="Timer">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="1:00" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-Hp-yOf" userLabel="Timer">
                                 <rect key="frame" x="104" y="440" width="112" height="81"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,11 +222,27 @@
                         <outlet property="levelControlButton" destination="k6M-g7-1Kg" id="A3K-Bv-Ojs"/>
                         <outlet property="secondText" destination="T3U-ji-6lB" id="kww-fe-rtv"/>
                         <outlet property="thirdText" destination="U7b-u0-tI3" id="gVL-JD-xbM"/>
+                        <outlet property="timerText" destination="0fV-Hp-yOf" id="uta-f2-hxQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="132.04225352112675"/>
+        </scene>
+        <!--Event Info Controller-->
+        <scene sceneID="iKe-Kq-zRp">
+            <objects>
+                <viewController id="0ng-tP-gbV" customClass="EventInfoController" customModule="Bout_Time" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOe-fb-CMV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CKA-P8-FXl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lvc-Je-PEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="23"/>
         </scene>
     </scenes>
     <resources>
