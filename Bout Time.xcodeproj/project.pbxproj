@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		310BA2FA207891C0007F763C /* events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 310BA2F9207891C0007F763C /* events.plist */; };
 		310BA2FC2078A628007F763C /* EventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA2FB2078A628007F763C /* EventsProvider.swift */; };
+		310BA2FE2078BD9C007F763C /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA2FD2078BD9C007F763C /* QuizManager.swift */; };
 		312C63422077AF3A00FF090D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C63412077AF3A00FF090D /* AppDelegate.swift */; };
 		312C63442077AF3A00FF090D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C63432077AF3A00FF090D /* ViewController.swift */; };
 		312C63472077AF3A00FF090D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312C63452077AF3A00FF090D /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		310BA2F9207891C0007F763C /* events.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = events.plist; sourceTree = "<group>"; };
 		310BA2FB2078A628007F763C /* EventsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProvider.swift; sourceTree = "<group>"; };
+		310BA2FD2078BD9C007F763C /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		312C633E2077AF3A00FF090D /* Bout Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bout Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		312C63412077AF3A00FF090D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312C63432077AF3A00FF090D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				312C634D2077AF3C00FF090D /* Info.plist */,
 				310BA2F9207891C0007F763C /* events.plist */,
 				310BA2FB2078A628007F763C /* EventsProvider.swift */,
+				310BA2FD2078BD9C007F763C /* QuizManager.swift */,
 			);
 			path = "Bout Time";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310BA2FE2078BD9C007F763C /* QuizManager.swift in Sources */,
 				312C63442077AF3A00FF090D /* ViewController.swift in Sources */,
 				312C63422077AF3A00FF090D /* AppDelegate.swift in Sources */,
 				310BA2FC2078A628007F763C /* EventsProvider.swift in Sources */,

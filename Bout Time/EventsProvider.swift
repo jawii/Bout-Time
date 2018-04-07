@@ -33,10 +33,6 @@ struct Event :EventData{
     }
 }
 
-struct EventSelection {
-    var selection: [Event]
-}
-
 class PlistConverter {
     
     static func dictionary(fromFile name :String, ofType type: String) throws -> [String: AnyObject]{
@@ -52,6 +48,7 @@ class PlistConverter {
     }
 }
 
+///Returns Array Of Events
 class EventsUnarchiver {
     static func eventsSelection(fromDictionary dictionary : [String: AnyObject]) throws -> [Event] {
         
