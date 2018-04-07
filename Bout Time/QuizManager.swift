@@ -14,10 +14,10 @@ class QuizManager {
     var events: [Event]
     var roundControlBtn: UIButton
     
-    var firstText: UITextView
-    var secondText: UITextView
-    var thirdText: UITextView
-    var fourthText: UITextView
+    var firstText: UIButton
+    var secondText: UIButton
+    var thirdText: UIButton
+    var fourthText: UIButton
     var eventIndex: Int = 0
     var event1: Event
     var event2: Event
@@ -32,7 +32,7 @@ class QuizManager {
     
     var gameOn = true
     
-    init(events: [Event], firstText: UITextView, secondText: UITextView, thirdText: UITextView, fourthText: UITextView, timerLabel: UITextView, roundControlBtn: UIButton, infoLabel: UILabel){
+    init(events: [Event], firstText: UIButton, secondText: UIButton, thirdText: UIButton, fourthText: UIButton, timerLabel: UITextView, roundControlBtn: UIButton, infoLabel: UILabel){
         self.events = events
         self.firstText = firstText
         self.secondText = secondText
@@ -114,10 +114,10 @@ class QuizManager {
     }
 
     func updateTexts() {
-        firstText.text = event1.eventName
-        secondText.text = event2.eventName
-        thirdText.text = event3.eventName
-        fourthText.text = event4.eventName
+        firstText.setTitle(event1.eventName, for: .normal)
+        secondText.setTitle(event2.eventName, for: .normal)
+        thirdText.setTitle(event3.eventName, for: .normal)
+        fourthText.setTitle(event4.eventName, for: .normal)
     }
     
     ///Starts timer with timeInterval

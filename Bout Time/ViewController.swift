@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     let events: [Event]
     var gameObject: QuizManager!
     
-    @IBOutlet weak var firstText: UITextView!
-    @IBOutlet weak var secondText: UITextView!
-    @IBOutlet weak var thirdText: UITextView!
-    @IBOutlet weak var fourthText: UITextView!
+    @IBOutlet weak var firstText: UIButton!
+    @IBOutlet weak var secondText: UIButton!
+    @IBOutlet weak var thirdText: UIButton!
+    @IBOutlet weak var fourthText: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var levelControlButton: UIButton!
     @IBOutlet weak var timerText: UITextView!
@@ -91,7 +91,8 @@ class ViewController: UIViewController {
         gameObject.updateTexts()
     }
     
-    @IBAction func showInfo(_ sender: UITextView) {
+    @IBAction func showInfo(_ sender: UIButton) {
+        
         
     }
     
