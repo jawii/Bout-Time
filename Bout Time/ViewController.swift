@@ -22,6 +22,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var levelControlButton: UIButton!
     @IBOutlet weak var timerText: UITextView!
     
+    //not used
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button6: UIButton!
+    
+    
+    
+    
     var urlToSend = ""
     
 
@@ -39,17 +50,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(gameObject.events[0].site)
-        gameObject = QuizManager(events: events, firstText: firstText, secondText: secondText, thirdText: thirdText, fourthText: fourthText, timerLabel: timerText, roundControlBtn: levelControlButton, infoLabel: infoLabel)
-        
+        gameObject = QuizManager(events: events, firstText: firstText, secondText: secondText, thirdText: thirdText, fourthText: fourthText, timerLabel: timerText, roundControlBtn: levelControlButton, infoLabel: infoLabel, mainController: self)
         gameObject.startGame()
-        
-        //shake
         self.becomeFirstResponder() //get the shake gesture
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
    
     // We are willing to become first responder to get shake motion
@@ -58,7 +65,6 @@ class ViewController: UIViewController {
             return true
         }
     }
-    
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         
@@ -95,11 +101,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showInfo(_ sender: UIButton) {
-        
         if gameObject.gameOn {
             return
         }
-        
         switch sender.tag {
         case 1:
             urlToSend = gameObject.event1.site
@@ -112,22 +116,23 @@ class ViewController: UIViewController {
         default:
             urlToSend = "http://www.google.fi"
         }
-        
         performSegue(withIdentifier: "infoPresenter", sender: self)
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "EventInfoController")
-        self.present(newViewController, animated: true, completion: nil)
-        
-        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //segue has ending point and starting point. get the ending point and set the url string to correct
         let vc = segue.destination as! EventInfoController
         vc.webDestination = urlToSend
     }
     
-   
-
+    @IBAction func startNewRound() {
+        gameObject.startRound()
+    }
+    
+    func gameEnd() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "gameEndView")
+        self.present(newViewController, animated: true, completion: nil)
+    }
 }
 

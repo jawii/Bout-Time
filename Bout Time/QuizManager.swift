@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 import GameplayKit
 
+
+
+
 class QuizManager {
     var events: [Event]
     var roundControlBtn: UIButton
@@ -36,7 +39,9 @@ class QuizManager {
     var totalScore = 0
     var totalRoundNumbers = 6
     
-    init(events: [Event], firstText: UIButton, secondText: UIButton, thirdText: UIButton, fourthText: UIButton, timerLabel: UITextView, roundControlBtn: UIButton, infoLabel: UILabel){
+    var mainController: ViewController
+    
+    init(events: [Event], firstText: UIButton, secondText: UIButton, thirdText: UIButton, fourthText: UIButton, timerLabel: UITextView, roundControlBtn: UIButton, infoLabel: UILabel, mainController: ViewController){
         self.events = events
         self.firstText = firstText
         self.secondText = secondText
@@ -50,6 +55,7 @@ class QuizManager {
         self.timeLabel = timerLabel
         self.roundControlBtn = roundControlBtn
         self.infoLabel = infoLabel
+        self.mainController = mainController
     }
     
     ///shuffle events array
@@ -78,7 +84,7 @@ class QuizManager {
     }
     
     func wrongAnswer() {
-        print("Wrong Answer")
+        //print("Wrong Answer")
         roundControlBtn.setImage(UIImage(named: "next_round_fail.png"), for: .normal)
         if roundNumber == totalRoundNumbers {
             gameEnd()
@@ -86,7 +92,7 @@ class QuizManager {
     }
     
     func correctAnswer() {
-        print("Correct Answer")
+        //print("Correct Answer")
         totalScore += 1
         roundControlBtn.setImage(UIImage(named: "next_round_success.png"), for: .normal)
         if roundNumber == totalRoundNumbers {
@@ -95,10 +101,14 @@ class QuizManager {
     }
     
     func gameEnd() {
-        print("Game end your score: \(totalScore)")
+        //print("Game end your score: \(totalScore)")
+        //roundControlBtn.setImage(UIImage(named: "play_again.png"), for: .normal)
+        //infoLabel.text = "Game end! Correct answers: \(totalScore)"
+        mainController.gameEnd()
     }
     
     func startGame() {
+        roundNumber = 0
         shuffleEvents()
         startRound()
     }
@@ -116,14 +126,13 @@ class QuizManager {
         event3 = events[eventIndex + 2]
         event4 = events[eventIndex + 3]
         eventIndex += 4
-        
+    
         //set index zero if it's out of events length
         //this is not going to happen at the end versiona
         if eventIndex + 5 > events.count {
             shuffleEvents()
             eventIndex = 0
         }
-        
         roundTime = 60
         startTimer()
         updateTexts()

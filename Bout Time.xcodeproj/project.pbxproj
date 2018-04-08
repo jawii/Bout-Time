@@ -16,6 +16,7 @@
 		312C63492077AF3C00FF090D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312C63482077AF3C00FF090D /* Assets.xcassets */; };
 		312C634C2077AF3C00FF090D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312C634A2077AF3C00FF090D /* LaunchScreen.storyboard */; };
 		316605DE2079597000470548 /* EventInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316605DD2079597000470548 /* EventInfoController.swift */; };
+		316C9758207A43EB00AB4758 /* GameEndController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C9757207A43EB00AB4758 /* GameEndController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		312C634B2077AF3C00FF090D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		312C634D2077AF3C00FF090D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		316605DD2079597000470548 /* EventInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoController.swift; sourceTree = "<group>"; };
+		316C9757207A43EB00AB4758 /* GameEndController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				310BA2FB2078A628007F763C /* EventsProvider.swift */,
 				310BA2FD2078BD9C007F763C /* QuizManager.swift */,
 				316605DD2079597000470548 /* EventInfoController.swift */,
+				316C9757207A43EB00AB4758 /* GameEndController.swift */,
 			);
 			path = "Bout Time";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				310BA2FE2078BD9C007F763C /* QuizManager.swift in Sources */,
 				312C63442077AF3A00FF090D /* ViewController.swift in Sources */,
 				312C63422077AF3A00FF090D /* AppDelegate.swift in Sources */,
+				316C9758207A43EB00AB4758 /* GameEndController.swift in Sources */,
 				316605DE2079597000470548 /* EventInfoController.swift in Sources */,
 				310BA2FC2078A628007F763C /* EventsProvider.swift in Sources */,
 			);
