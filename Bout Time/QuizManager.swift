@@ -30,7 +30,11 @@ class QuizManager {
     var timer: Timer?
     var roundTime = 60
     
+    var roundNumber = 0
+    
     var gameOn = true
+    var totalScore = 0
+    var totalRoundNumbers = 6
     
     init(events: [Event], firstText: UIButton, secondText: UIButton, thirdText: UIButton, fourthText: UIButton, timerLabel: UITextView, roundControlBtn: UIButton, infoLabel: UILabel){
         self.events = events
@@ -54,6 +58,7 @@ class QuizManager {
     }
     
     func checkOrder() {
+        roundNumber += 1
         gameOn = false
         //stop the timer
         timer?.invalidate()
@@ -75,11 +80,22 @@ class QuizManager {
     func wrongAnswer() {
         print("Wrong Answer")
         roundControlBtn.setImage(UIImage(named: "next_round_fail.png"), for: .normal)
+        if roundNumber == totalRoundNumbers {
+            gameEnd()
+        }
     }
     
     func correctAnswer() {
         print("Correct Answer")
+        totalScore += 1
         roundControlBtn.setImage(UIImage(named: "next_round_success.png"), for: .normal)
+        if roundNumber == totalRoundNumbers {
+            gameEnd()
+        }
+    }
+    
+    func gameEnd() {
+        print("Game end your score: \(totalScore)")
     }
     
     func startGame() {

@@ -127,9 +127,7 @@ class ViewController: UIViewController {
         vc.webDestination = urlToSend
     }
     
-    @IBAction func startNewRound() {
-        gameObject.startRound()
-    }
+   
 
 }
 
