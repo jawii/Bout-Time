@@ -224,6 +224,7 @@
                         <outlet property="thirdText" destination="Dfd-zx-ONf" id="GcK-us-bYG"/>
                         <outlet property="timerText" destination="0fV-Hp-yOf" id="uta-f2-hxQ"/>
                         <segue destination="0ng-tP-gbV" kind="presentation" identifier="infoPresenter" id="qI5-og-IOJ"/>
+                        <segue destination="elD-Yo-Fxg" kind="presentation" identifier="gameEnd" id="UkO-GQ-ofh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -287,25 +288,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdG-yR-2Cz">
-                                <rect key="frame" x="82" y="263" width="156" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="rdG-yR-2Cz" secondAttribute="height" multiplier="156:43" id="rXL-9Z-1Lr"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="play_again"/>
-                                <connections>
-                                    <action selector="playAgain" destination="elD-Yo-Fxg" eventType="touchUpInside" id="CMA-BY-nlr"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kcq-QK-sLn">
+                                <rect key="frame" x="0.0" y="176" width="320" height="193"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqJ-pE-spS" userLabel="Info label">
+                                        <rect key="frame" x="117" y="0.0" width="86.5" height="19"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.30588235289999999" green="0.56470588239999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="shadowColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="1/6" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bil-Wg-mAB" userLabel="Timer">
+                                        <rect key="frame" x="103.5" y="19" width="113" height="107.5"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="113" id="14O-TS-bdF"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdG-yR-2Cz">
+                                        <rect key="frame" x="85" y="126.5" width="150" height="66.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="cIS-Xo-ALb"/>
+                                            <constraint firstAttribute="width" secondItem="rdG-yR-2Cz" secondAttribute="height" multiplier="160:71" id="uSU-NG-Hds"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="play_again"/>
+                                        <connections>
+                                            <action selector="playAgain" destination="elD-Yo-Fxg" eventType="touchUpInside" id="CMA-BY-nlr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rdG-yR-2Cz" firstAttribute="leading" secondItem="gcc-J4-ujI" secondAttribute="leading" constant="82" id="5EC-15-HeQ"/>
-                            <constraint firstItem="rdG-yR-2Cz" firstAttribute="centerY" secondItem="D0s-DL-AGQ" secondAttribute="centerY" id="Lha-wL-Y7h"/>
-                            <constraint firstItem="gcc-J4-ujI" firstAttribute="trailing" secondItem="rdG-yR-2Cz" secondAttribute="trailing" constant="82" id="ygT-iT-2rX"/>
+                            <constraint firstItem="Kcq-QK-sLn" firstAttribute="leading" secondItem="gcc-J4-ujI" secondAttribute="leading" id="fbp-DU-p2L"/>
+                            <constraint firstAttribute="trailing" secondItem="Kcq-QK-sLn" secondAttribute="trailing" id="hBb-za-dNS"/>
+                            <constraint firstItem="gcc-J4-ujI" firstAttribute="bottom" secondItem="Kcq-QK-sLn" secondAttribute="bottom" constant="199" id="p63-ij-UxC"/>
+                            <constraint firstItem="Kcq-QK-sLn" firstAttribute="top" secondItem="gcc-J4-ujI" secondAttribute="top" constant="156" id="r1M-mh-2k0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gcc-J4-ujI"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreText" destination="Bil-Wg-mAB" id="wDu-uX-vx9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRK-i6-Ppm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

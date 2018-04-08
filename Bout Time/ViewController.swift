@@ -130,9 +130,18 @@ class ViewController: UIViewController {
     }
     
     func gameEnd() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "gameEndView")
-        self.present(newViewController, animated: true, completion: nil)
+        
+        //get the totalscore
+        let totalScore = gameObject.totalScore
+        
+        if let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameEndView") as? GameEndController {
+            newViewController.score = totalScore
+            newViewController.gameObject = gameObject
+            //navigationController?.pushViewController(newViewController, animated: true)
+            self.present(newViewController, animated: true, completion: nil)
+        }
+       
+ 
     }
 }
 

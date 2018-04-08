@@ -9,13 +9,18 @@
 import UIKit
 
 class GameEndController: UIViewController {
-
+    
+    var score: Int!
+    var gameObject: QuizManager!
+    
+    @IBOutlet weak var scoreText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("In the viewDidLoad")
+        scoreText.text = "1/\(score)"
+        gameObject.startRound()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
