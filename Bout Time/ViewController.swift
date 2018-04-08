@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     let events: [Event]
     var gameObject: QuizManager!
+
     
     @IBOutlet weak var firstText: UIButton!
     @IBOutlet weak var secondText: UIButton!
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var levelControlButton: UIButton!
     @IBOutlet weak var timerText: UITextView!
+    
+    var urlToSend = ""
     
 
     required init?(coder aDecoder: NSCoder) {
@@ -93,13 +96,35 @@ class ViewController: UIViewController {
     
     @IBAction func showInfo(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "EventInfoController", sender: self)
+        if gameObject.gameOn {
+            return
+        }
+        
+        switch sender.tag {
+        case 1:
+            urlToSend = gameObject.event1.site
+        case 2:
+            urlToSend = gameObject.event2.site
+        case 3:
+            urlToSend = gameObject.event3.site
+        case 4:
+            urlToSend = gameObject.event4.site
+        default:
+            urlToSend = "http://www.google.fi"
+        }
+        
+        performSegue(withIdentifier: "infoPresenter", sender: self)
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "EventInfoController")
-
         self.present(newViewController, animated: true, completion: nil)
         
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //segue has ending point and starting point. get the ending point and set the url string to correct
+        let vc = segue.destination as! EventInfoController
+        vc.webDestination = urlToSend
     }
     
     @IBAction func startNewRound() {

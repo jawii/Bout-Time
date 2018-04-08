@@ -11,14 +11,14 @@ import WebKit
 
 class EventInfoController: UIViewController {
     
+    var webDestination = ""
     
     @IBOutlet weak var webViewOutlet: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let str = ""
-        let siteURL = NSURL (string: str);
+        let siteURL = NSURL (string: webDestination);
         webViewOutlet.load(URLRequest(url: siteURL! as URL));
 
     }

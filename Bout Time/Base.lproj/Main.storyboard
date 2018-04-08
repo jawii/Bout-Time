@@ -212,6 +212,7 @@
                         <outlet property="secondText" destination="CPf-3A-RpS" id="XwK-RZ-DRV"/>
                         <outlet property="thirdText" destination="Dfd-zx-ONf" id="GcK-us-bYG"/>
                         <outlet property="timerText" destination="0fV-Hp-yOf" id="uta-f2-hxQ"/>
+                        <segue destination="0ng-tP-gbV" kind="presentation" identifier="infoPresenter" id="qI5-og-IOJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
