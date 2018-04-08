@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var levelControlButton: UIButton!
     @IBOutlet weak var timerText: UITextView!
     
-/*
+
     //not used
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -30,7 +30,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button5: UIButton!
     @IBOutlet weak var button6: UIButton!
-*/
     
     var urlToSend = ""
     
