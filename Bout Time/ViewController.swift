@@ -93,6 +93,12 @@ class ViewController: UIViewController {
     
     @IBAction func showInfo(_ sender: UIButton) {
         
+        performSegue(withIdentifier: "EventInfoController", sender: self)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "EventInfoController")
+
+        self.present(newViewController, animated: true, completion: nil)
         
     }
     

@@ -7,21 +7,30 @@
 //
 
 import UIKit
+import WebKit
 
 class EventInfoController: UIViewController {
-
+    
+    
+    @IBOutlet weak var webViewOutlet: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let str = ""
+        let siteURL = NSURL (string: str);
+        webViewOutlet.load(URLRequest(url: siteURL! as URL));
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
+    @IBAction func closeView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
