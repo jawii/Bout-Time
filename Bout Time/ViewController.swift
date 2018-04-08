@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var levelControlButton: UIButton!
     @IBOutlet weak var timerText: UITextView!
     
+/*
     //not used
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -29,9 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button5: UIButton!
     @IBOutlet weak var button6: UIButton!
-    
-    
-    
+*/
     
     var urlToSend = ""
     
@@ -119,29 +118,23 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "infoPresenter", sender: self)
     }
     
+    func gameEnd() {
+        performSegue(withIdentifier: "gameEnd", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //segue has ending point and starting point. get the ending point and set the url string to correct
-        let vc = segue.destination as! EventInfoController
-        vc.webDestination = urlToSend
+        if let vc = segue.destination as? EventInfoController {
+            vc.webDestination = urlToSend
+        }
+        if let vc = segue.destination as? GameEndController {
+            vc.score = gameObject.totalScore
+            vc.gameObject = gameObject
+        }
     }
     
     @IBAction func startNewRound() {
         gameObject.startRound()
-    }
-    
-    func gameEnd() {
-        
-        //get the totalscore
-        let totalScore = gameObject.totalScore
-        
-        if let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameEndView") as? GameEndController {
-            newViewController.score = totalScore
-            newViewController.gameObject = gameObject
-            //navigationController?.pushViewController(newViewController, animated: true)
-            self.present(newViewController, animated: true, completion: nil)
-        }
-       
- 
     }
 }
 
