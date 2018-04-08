@@ -38,6 +38,7 @@ class QuizManager {
     var gameOn = true
     var totalScore = 0
     var totalRoundNumbers = 6
+    var canShowScores = false
     
     var mainController: ViewController
     
@@ -63,7 +64,10 @@ class QuizManager {
          events = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: self.events) as! [Event]
     }
     
-    func checkOrder() {
+    ///Checks and values answer
+    func valueAnswer() {
+        //reset the label text here
+        timeLabel.text = "0:59"
         roundNumber += 1
         gameOn = false
         //stop the timer
@@ -74,43 +78,58 @@ class QuizManager {
         //change labeltext to infoText about pressing the events
         infoLabel.text = "Tap Events to Show More"
         
+        
+        var imageName = ""
+        var wasCorrect = false
         //go trough events and check if lower level has higher lower year
         if Int(event1.time) <= Int(event2.time) && Int(event2.time) <= Int(event3.time) && Int(event3.time) <= Int(event4.time) {
-            correctAnswer()
+            imageName = "next_round_success.png"
+            totalScore += 1
+            wasCorrect = true
         }
         else{
-            wrongAnswer()
+            imageName = "next_round_fail.png"
         }
-    }
-    
-    func wrongAnswer() {
-        //print("Wrong Answer")
-        roundControlBtn.setImage(UIImage(named: "next_round_fail.png"), for: .normal)
+        
+        roundControlBtn.setImage(UIImage(named: imageName), for: .normal)
+        
+        //End the game if final round reached
         if roundNumber == totalRoundNumbers {
-            gameEnd()
+            gameEnd(wasItCorrectAnswer: wasCorrect)
         }
     }
     
-    func correctAnswer() {
-        //print("Correct Answer")
-        totalScore += 1
-        roundControlBtn.setImage(UIImage(named: "next_round_success.png"), for: .normal)
-        if roundNumber == totalRoundNumbers {
-            gameEnd()
-        }
+    func gameEnd(wasItCorrectAnswer: Bool) {
+        //now button pressed in viewcontroller leads to scoreboard
+        canShowScores = true
+        
+        //modify button
+        
+        //get the color
+        let color = wasItCorrectAnswer ? UIColor.green : UIColor.red
+        let mark = wasItCorrectAnswer ? "\u{2713}" : "\u{274C}"
+        
+        //roundControlBtn.layer.cornerRadius = 15;
+        roundControlBtn.clipsToBounds = true
+        roundControlBtn.setImage(nil, for: .normal)
+        roundControlBtn.setTitle(mark + "  Show Scores", for: .normal)
+        roundControlBtn.setTitleColor(color, for: .normal)
+        //roundControlBtn.backgroundColor = color
+        roundControlBtn.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 28)
     }
     
-    func gameEnd() {
-        //print("Game end your score: \(totalScore)")
-        //roundControlBtn.setImage(UIImage(named: "play_again.png"), for: .normal)
-        //infoLabel.text = "Game end! Correct answers: \(totalScore)"
-        mainController.gameEnd()
+    func resetButton() {
+        roundControlBtn.layer.cornerRadius = 0
+        //roundControlBtn.backgroundColor = UIColor.clear
     }
     
     func startGame() {
+        canShowScores = false
         roundNumber = 0
         shuffleEvents()
         startRound()
+        
+        resetButton()
     }
     
     func startRound() {
@@ -157,7 +176,7 @@ class QuizManager {
         roundTime -= 1
         
         if roundTime == 0 {
-            checkOrder()
+            valueAnswer()
         }
         timeLabel.text = "0:\(roundTime)"
     }

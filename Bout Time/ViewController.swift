@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         
         if motion == .motionShake && gameObject.gameOn {
-            gameObject.checkOrder()
+            gameObject.valueAnswer()
         }
     }
     
@@ -123,6 +123,8 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //segue has ending point and starting point. get the ending point and set the url string to correct
+        
+        //detech which destination and set the the corresponding data
         if let vc = segue.destination as? EventInfoController {
             vc.webDestination = urlToSend
         }
@@ -133,7 +135,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startNewRound() {
-        gameObject.startRound()
+        //if rounds are over, go to scoretable
+        if gameObject.canShowScores {
+            gameEnd()
+        }
+        else {
+            gameObject.startRound()
+        }
+        
     }
 }
 
