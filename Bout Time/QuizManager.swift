@@ -126,6 +126,7 @@ class QuizManager {
     func startGame() {
         canShowScores = false
         roundNumber = 0
+        totalScore = 0
         shuffleEvents()
         startRound()
         
