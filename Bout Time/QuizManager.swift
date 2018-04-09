@@ -53,6 +53,7 @@ class QuizManager {
         self.event2 = events[eventIndex + 1]
         self.event3 = events[eventIndex + 2]
         self.event4 = events[eventIndex + 3]
+        
         self.timeLabel = timerLabel
         self.roundControlBtn = roundControlBtn
         self.infoLabel = infoLabel
@@ -78,7 +79,6 @@ class QuizManager {
         //change labeltext to infoText about pressing the events
         infoLabel.text = "Tap Events to Show More"
         
-        
         var imageName = ""
         var wasCorrect = false
         //go trough events and check if lower level has higher lower year
@@ -99,13 +99,12 @@ class QuizManager {
         }
     }
     
+    /// Shows score of final round and sets the levelcontrolbutton to lead to the GameEndController
     func gameEnd(wasItCorrectAnswer: Bool) {
         //now button pressed in viewcontroller leads to scoreboard
         canShowScores = true
         
         //modify button
-        
-        //get the color
         let color = wasItCorrectAnswer ? UIColor.green : UIColor.red
         let mark = wasItCorrectAnswer ? "\u{2713}" : "\u{274C}"
         
@@ -123,16 +122,17 @@ class QuizManager {
         //roundControlBtn.backgroundColor = UIColor.clear
     }
     
+    /// Initialise game. Resets scores and buttons
     func startGame() {
         canShowScores = false
         roundNumber = 0
         totalScore = 0
         shuffleEvents()
         startRound()
-        
         resetButton()
     }
     
+    /// Starts round
     func startRound() {
         gameOn = true
         //setup the labels and reveal the timer
@@ -153,6 +153,7 @@ class QuizManager {
             shuffleEvents()
             eventIndex = 0
         }
+        
         roundTime = 60
         startTimer()
         updateTexts()
@@ -170,8 +171,7 @@ class QuizManager {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
-    ///Updates times
-    ///@objc <- dunno what that means but hey, it works :>
+    ///Updates timer
     @objc func updateTimer(){
         //print(roundTime)
         roundTime -= 1

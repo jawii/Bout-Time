@@ -63,6 +63,7 @@ class ViewController: UIViewController {
             return true
         }
     }
+    
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         
